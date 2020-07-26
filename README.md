@@ -17,4 +17,5 @@ Follow the steps to locally host :-
 2. Install the above mentioned libraries.
 3. cd into the folder and type `python manage.py runserver` in the terminal.
 
-
+### Deployment
+If you want to deploy the site on heroku, all the necessary changes are aldready done and no need to make the requirements.txt file just git push into the heroku server.
