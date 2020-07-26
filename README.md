@@ -1,4 +1,4 @@
-# Starry_Night
+# Infoverse
 This is a type of website where people can create various groups which other people can join and have conversations.(similar to whatsapp)
 This is currently the 1st version.Version 2 coming soon ...
 ### Libraries 
