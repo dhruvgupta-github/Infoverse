@@ -13,4 +13,4 @@ This is currently the 1st version.Version 2 coming soon ...
 Follow the steps to locally host :-
 1. In the terminal type `https://github.com/dhruv-stella/Infoverse.git`
 2. Install the above mentioned libraries.
-3. Go inside the Starry_Night folder and type `python manage.py runserver`
+3. cd into the folder and type `python manage.py runserver` in the terminal.
