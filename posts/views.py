@@ -6,7 +6,9 @@ from django.views import generic
 from django.http import Http404
 
 from braces.views import SelectRelatedMixin
-from posts import models,forms
+from posts import models
+
+from posts.forms import PostForm
 
 from django.shortcuts import get_object_or_404
 
@@ -47,8 +49,11 @@ class PostDetail(SelectRelatedMixin,generic.DetailView):
         return queryset.filter(user__username__iexact=self.kwargs.get('username'))
 
 class CreatePost(LoginRequiredMixin,SelectRelatedMixin,generic.CreateView):
-    fields = ('message','group')
+    # fields = ('message','group')
     model=models.Post
+
+    # medium style adding
+    form_class= PostForm
 
     def form_valid(self,form):
         self.object = form.save(commit=False)

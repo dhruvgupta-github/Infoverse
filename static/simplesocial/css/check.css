@@ -83,3 +83,9 @@ color: rgba(236, 214, 14, 0.657); /* Nice color */
     color: rgba(236, 214, 14, 0.657);
     font-size: 1.3em;
 }
+.note {
+    display: inline;
+    color:black;
+    font-weight: bolder;
+    background-color:white;
+}

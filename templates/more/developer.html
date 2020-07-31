@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+{% if user.is_authenticated %}
+<div class='about-page'>
+    <h1>Hi {{user.username}} </h1>
+
+{% else %}
+
+<h1>Hi, looks like you have not logged in yet ... </h1>    
+
+<h3>
+    If you have signed up aldready then kindly <a href="{% url 'accounts:login' %}">Log In</a>.
+    <p></p>
+    But if you are a first time visitor make sure first you <a href="{% url 'accounts:signup' %}">Sign Up</a> and then <a href="{% url 'accounts:login' %}">Log In</a>.
+</h3>
+
+
+{% endif %}
+</div>
+
+<br></br>
+
+<div class=" container about-content" >
+
+    <h4>
+        This page is created and maintained currently by <a href="https://www.linkedin.com/in/dhruv-gupta-32021616a/">Dhruv Gupta</a>.
+    </h4>
+
+    
+<ol>
+    <li>
+       <h5 class='topic'>Email Id :</h5> 
+       
+            dhruv.gdps@gmail.com
+        
+
+    </li>
+    <li>
+        <h5 class='topic'>Github :</h5> 
+         
+            
+            <a href="https://github.com/dhruv-stella">Github profile</a>
+         
+ 
+     </li>
+     <li>
+        <h5 class='topic'>Linkedin :</h5> 
+         
+            <a href="https://www.linkedin.com/in/dhruv-gupta-32021616a/">Linkedin profile</a>
+         
+ 
+     </li>
+
+    
+
+</ol>
+
+
+
+
+
+
+{% endblock %}

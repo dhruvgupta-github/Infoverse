@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+{% if user.is_authenticated %}
+<div class='about-page'>
+    <h1>Welcome {{user.username}} </h1>
+
+{% else %}
+
+<h1>Hi, looks like you have not logged in yet ... </h1>    
+
+<h3>
+    If you have signed up aldready then kindly <a href="{% url 'accounts:login' %}">Log In</a>.
+    <p></p>
+    But if you are a first time visitor make sure first you <a href="{% url 'accounts:signup' %}">Sign Up</a> and then <a href="{% url 'accounts:login' %}">Log In</a>.
+</h3>
+
+
+{% endif %}
+</div>
+
+<br></br>
+
+<div class=" container about-content" >
+
+<h4>This page is designed to give you a overview about the website so 
+    that using the site is fun rather than being a head scratcher.
+</h4>
+    <p></p>
+    The basic purpose of this page is to share information and hence the name infoverse.
+    We solve this purpose by providing our users with the ability to form groups and join them according to their
+    interest.
+    <p></p>
+    <h3>Group :</h3> A group has 4 major parts.
+    <p></p>
+
+    <ul>
+        <li>Title : <p>A title is a name given to a group by its creator.</p></li>
+        <li>Description : <p> A description gives a overview about the type of information that will be shared in the group.</p></li>
+        <li>Join : <p>
+            Every user of the site has the ability to join a group which means he/she will be able to
+            see to all the information shared in that group as well as share relevent information by using the post feature.
+                </p>
+        </li>
+        <li>Leave : <p>
+            If you have joined a group and now dont want to be the part of the group you have the option to leave the group.
+            After leaving you cannot see the content shared in the group.
+                </p>
+        </li>
+    </ul>
+
+    <p></p>
+    <h3>Member:</h3> <p></p> If a user has joined a particular group he/she will now be shown as a member of that group.
+    More the members the popular the group.
+    The more the posts the more active the group.
+    <p></p>
+
+    <h3>Post: </h3>
+    <p></p>A post refers to sharing information in a group.
+    In order to post, it is necessary for the user to join atleast one group.
+    Every post will have a user's stamp who posted it and the date-time stamp.
+    <p></p>
+    By clicking on the user's stamp you can view all the posts the user has posted.
+
+</div>
+
+
+
+{% endblock %}

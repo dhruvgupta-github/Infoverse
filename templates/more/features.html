@@ -1,0 +1,54 @@
+{% extends 'base.html' %}
+{% block content %}
+    
+{% if user.is_authenticated %}
+<div class='about-page'>
+    <h1>Welcome {{user.username}} </h1>
+
+{% else %}
+
+<h1>Hi, looks like you have not logged in yet ... </h1>    
+
+<h3>
+    If you have signed up aldready then kindly <a href="{% url 'accounts:login' %}">Log In</a>.
+    <p></p>
+    But if you are a first time visitor make sure first you <a href="{% url 'accounts:signup' %}">Sign Up</a> and then <a href="{% url 'accounts:login' %}">Log In</a>.
+</h3>
+
+
+{% endif %}
+</div>
+
+<br></br>
+
+<div class=" container about-content" >
+
+    <h4>
+This page is designed to keep up updated with the latest features about the website.
+The order of features is in the order latest to oldest.
+    </h4>
+
+<ol>
+    <li>
+       <h5 class='topic'>Medium-Editor Added</h5> 
+        <p>
+            For having a better experience when posting or describing your group, we have added medium-style editor.
+            So now when you will post or describe your group and select a piece of text then various of options like 
+            bold,italic,hyperlink etc. will appear above the text for you to select from.
+
+        </p>
+
+    </li>
+
+    
+
+</ol>
+
+
+<div class='btn note'>Note:</div> For Latest updates join the Updates group.
+
+</div>
+
+
+
+{% endblock %}

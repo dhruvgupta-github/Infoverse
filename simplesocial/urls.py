@@ -31,4 +31,8 @@ urlpatterns = [
 
     path('posts/',include('posts.urls',namespace='posts')),
     path('groups/',include('groups.urls',namespace='groups')),
+
+    path('about/',views.AboutPage.as_view(),name='about'),
+    path('feature/',views.FeaturePage.as_view(),name='feature'),
+    path('developer/',views.DeveloperPage.as_view(),name='developer'),
 ]
